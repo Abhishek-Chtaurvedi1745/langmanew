@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+.swiper {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  padding-bottom: 30px;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+@media (max-width: 640px) {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 28px !important;
+    height: 28px !important;
+
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .swiper-button-prev {
+    left: -6px !important;
+  }
+
+  .swiper-button-next {
+    right: -6px !important;
+  }
+}
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+     .language-swiper {
+  padding-bottom: 50px; 
+}
+
+/* move dots below slider */
+.language-swiper .swiper-pagination {
+  bottom: 0 !important;
+  position: relative;
+  margin-top: 0px;
+}
+
+
+.language-swiper .swiper-pagination-bullet {
+  /* background: #1E5C5A; */
+  opacity: 0.3;
+}
+
+.language-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  /* background: #1E5C5A; */
+}
